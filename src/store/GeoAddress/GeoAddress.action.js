@@ -8,11 +8,12 @@ export const getLocation = (dispatch)=>{
         dispatch({type: SHOW_MAPS_LATITUDE_LONGITUDE,lat:e.coords.latitude,lng:e.coords.longitude});
       },
       function error (msg) { alert("Please enable your GPS position feature")},
-      {maximumAge: 10000, timeout: 5000, enableHighAccuracy: true}
+      {maximumAge: 10000, timeout: 120000, enableHighAccuracy: true}
       )
 }
 
 export const ReverseGeoCoding = (dispatch,latiV,longV)=>{
+    console.log(latiV, longV, "Latitude and Longitude")
     axios.get(`https://apis.mapmyindia.com/advancedmaps/v1/76b92b0c0fa1a4aa728a1f50ab2fe773/rev_geocode?lat=${latiV}&lng=${longV}`)
     .then((r)=>{
     //   setAddress(r.data.results[0]);
