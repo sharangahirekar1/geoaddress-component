@@ -6,7 +6,10 @@ export const getLocation = (dispatch)=>{
         // setLatiV(+(e.coords.latitude));
         // setLongV(+(e.coords.longitude));
         dispatch({type: SHOW_MAPS_LATITUDE_LONGITUDE,lat:e.coords.latitude,lng:e.coords.longitude});
-      })
+      },
+      function error (msg) { alert("Please enable your GPS position feature")},
+      {maximumAge: 10000, timeout: 5000, enableHighAccuracy: true}
+      )
 }
 
 export const ReverseGeoCoding = (dispatch,latiV,longV)=>{
