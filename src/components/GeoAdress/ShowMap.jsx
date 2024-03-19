@@ -29,7 +29,7 @@ const ShowMap = () => {
       <Map provider={osm} height={600} defaultCenter={[latiV,longV]} defaultZoom={11}>
         <Marker width={50} anchor={[latiV,longV ]} />
         <Overlay anchor={[latiV,longV]} offset={[120, 79]}>
-          <img src='/logo512.png' width={240} height={158} alt='' />
+          <img src='/logo192.png' width={240} height={158} alt='' />
         </Overlay>
       </Map>
     </Container>

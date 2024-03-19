@@ -13,7 +13,6 @@ export const getLocation = (dispatch)=>{
 }
 
 export const ReverseGeoCoding = (dispatch,latiV,longV)=>{
-    console.log(latiV, longV, "Latitude and Longitude")
     axios.get(`https://apis.mapmyindia.com/advancedmaps/v1/76b92b0c0fa1a4aa728a1f50ab2fe773/rev_geocode?lat=${latiV}&lng=${longV}`)
     .then((r)=>{
     //   setAddress(r.data.results[0]);
