@@ -32,9 +32,9 @@ const ShowMap = () => {
     <Container id='map' style={{backgroundColor:"grey",width:"100%",height:"100vh"}} >
       <Map provider={osm} height={700} defaultCenter={[latiV,longV]} center={[latiV,longV]} defaultZoom={11}>
         <Marker width={50} anchor={[latiV,longV ]} />
-        <Overlay anchor={[latiV,longV]} offset={[120, 79]}>
+        {/* <Overlay anchor={[latiV,longV]} offset={[120, 79]}>
           <img src='/logo192.png' width={240} height={158} alt='' />
-        </Overlay>
+        </Overlay> */}
       </Map>
     </Container>
   )
