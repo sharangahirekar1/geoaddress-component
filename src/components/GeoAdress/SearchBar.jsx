@@ -14,7 +14,7 @@ const SearchBar = () => {
         <input placeholder='Search Places...' onChange={({target:{value}})=>{
             debounce(handleChange,value,1000,dispatch,ref)}
             }/>
-        {results && results.map((result)=>{
+        {results && Array.isArray(results) && results.map((result)=>{
           return (
             <div onClick={()=>dispatch({type: SHOW_MAPS_LATITUDE_LONGITUDE, lat: result.lat, lng: result.lon})} style={{border: '1px solid black',cursor: 'pointer'}} >{result.name},{result.state}</div>
           )

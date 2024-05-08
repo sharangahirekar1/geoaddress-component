@@ -18,7 +18,7 @@ const ShowMap = () => {
     if(latiV == "" & longV == ""){
       getLocation(dispatch);
     }
-  },[])
+  },[latiV, longV])
 
   React.useEffect(()=>{
      ReverseGeoCoding(dispatch,latiV,longV);
